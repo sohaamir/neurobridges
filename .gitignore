@@ -1,3 +1,16 @@
 .Rhistory
 .RData
 .Rproj.user
+
+# Ignore temporary R data files
+.RDataTmp
+
+# Optionally ignore other large files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore directories (if needed)
+node_modules/
+vendor/
