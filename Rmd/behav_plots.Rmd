@@ -1,0 +1,124 @@
+---
+title: "sst_behavioural_plotting"
+author: "Aamir Sohail"
+date: "2024-09-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(tidyverse)
+
+# Read the data
+sub_data <- read_csv("processed_data/stop_signal_preprocessed.csv")
+
+# Display the first few rows of the data
+head(sub_data)
+```
+
+## Summary Stats
+
+```{r}
+# Calculate summary statistics
+summary_stats <- sub_data %>%
+  group_by(id) %>%
+  summarize(
+    mean_rt = mean(rt, na.rm = TRUE),
+    correct_rate = mean(correct, na.rm = TRUE),
+    stop_rate = mean(task == "Stop"),
+    successful_stop_rate = mean(task == "Stop" & answer == "NoGo", na.rm = TRUE)
+  )
+
+# Calculate overall summary
+overall_summary <- summary_stats %>%
+  summarize(
+    mean_rt = mean(mean_rt),
+    correct_rate = mean(correct_rate),
+    stop_rate = mean(stop_rate),
+    successful_stop_rate = mean(successful_stop_rate)
+  )
+
+print(overall_summary)
+```
+
+## Distribution of Reaction Times
+
+```{r}
+ggplot(sub_data, aes(x = rt)) +
+  geom_histogram(binwidth = 20, fill = "skyblue", color = "black") +
+  labs(title = "Distribution of Reaction Times",
+       x = "Reaction Time (ms)",
+       y = "Count") +
+  theme_minimal()
+```
+
+## Correct Response Rate by Participant
+
+```{r}
+ggplot(summary_stats, aes(x = reorder(factor(id), correct_rate), y = correct_rate)) +
+  geom_bar(stat = "identity", fill = "lightgreen") +
+  labs(title = "Correct Response Rate by Participant",
+       x = "Participant ID",
+       y = "Correct Rate") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+## Successful Stop Rate vs. Mean Reaction Time
+
+```{r}
+ggplot(summary_stats, aes(x = mean_rt, y = successful_stop_rate)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Successful Stop Rate vs. Mean Reaction Time",
+       x = "Mean Reaction Time (ms)",
+       y = "Successful Stop Rate") +
+  theme_minimal()
+```
+
+
+## Response Distribution by Task Type
+
+```{r}
+response_distribution <- sub_data %>%
+  group_by(task, answer) %>%
+  summarize(count = n()) %>%
+  mutate(percentage = count / sum(count))
+
+ggplot(response_distribution, aes(x = task, y = percentage, fill = answer)) +
+  geom_bar(stat = "identity", position = "stack") +
+  labs(title = "Response Distribution by Task Type",
+       x = "Task",
+       y = "Percentage",
+       fill = "Response") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set3")
+```
+
+
+## 
+
+```{r}
+ggplot(sub_data, aes(x = rt)) +
+  geom_histogram(binwidth = 20, fill = "skyblue", color = "black") +
+  labs(title = "Distribution of Reaction Times",
+       x = "Reaction Time (ms)",
+       y = "Count") +
+  theme_minimal()
+```
+
+
+
+
+
+
+
