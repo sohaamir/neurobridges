@@ -16,5 +16,5 @@ node_modules/
 vendor/
 
 .DS_Store
-/neurbridges.Rproj
-
+/neurobridges.Rproj
+.Rproj.user/
