@@ -14,3 +14,7 @@
 # Ignore directories (if needed)
 node_modules/
 vendor/
+
+.DS_Store
+/neurbridges.Rproj
+
