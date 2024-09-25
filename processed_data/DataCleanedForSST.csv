@@ -1,0 +1,51 @@
+sub,motherTongue,motherTDetailed,birthCountry,yearImigration,age,sex,strongHand,education,maritalStatus,childNum,religion,religionAffinity,whetherDignosed,diagnosisDetailed,ReflectionSum,BroodingSum,DepressiveSum,IntrusiveSum,DeliberateSum,ReappraisalSum,SuppressionSum,SSRT
+28,Hebrew,,Israel,NA,22,2,1,BA student,1,0,1,Secular,No,,8,7,30,27,8,39,4,140
+54,Hebrew,,Israel,NA,28,1,1,BA,1,0,1,Traditional,No,,10,11,22,8,6,25,17,161
+7,Hebrew,,Israel,NA,25,1,1,BA,1,0,1,Secular,No,,11,12,37,22,14,30,14,169
+23,Hebrew,,Israel,NA,27,1,1,BA,1,0,1,Traditional,No,,19,18,40,28,23,28,8,172
+42,Hebrew,,Israel,NA,27,2,1,BA student,1,0,1,Secular,Yes,borderline personality,11,20,45,26,21,18,12,174
+19,Hebrew,,Israel,NA,25,2,1,BA student,2,0,1,Secular,No,,7,9,28,20,13,20,11,181
+21,Hebrew,,Israel,NA,20,2,1,High school,1,0,1,Secular,Yes,"ADHD, anxiety, OCD, trichotillomania",12,18,35,18,7,25,17,183
+35,Hebrew,,Israel,NA,25,2,1,BA student,1,0,1,Secular,No,,13,18,38,19,16,37,12,195
+64,Hebrew,,Israel,NA,23,2,1,BA student,1,0,1,Religious,No,,15,12,37,15,10,25,15,195
+81,Russian,,Russia,2021,26,2,1,MA,1,0,1,Religious,No,,12,12,20,21,19,25,13,198
+52,Hebrew,,Israel,NA,24,1,1,BA student,2,1,1,Religious,No,,9,12,30,7,7,24,10,200
+83,Hebrew,,Israel,NA,30,2,1,BA student,1,0,1,Traditional,No,,12,9,25,5,3,33,14,200
+24,Arabic,,Israel,1997,24,2,1,BA,1,0,2,Traditional,No,,14,17,38,26,21,30,19,206
+49,Hebrew,,Israel,NA,34,2,1,BA,2,2,1,Secular,No,,5,8,12,13,8,33,4,209
+36,English,,USA,2019,30,2,2,BA,1,0,1,Traditional,No,,14,9,22,9,9,30,14,217
+27,Hebrew,,Israel,NA,23,2,1,Tertiary Education,1,0,1,Secular,No,,11,11,33,7,9,20,22,219
+43,Russian,,Russia,2015,25,1,1,BA student,1,0,1,Traditional,No,,6,7,14,2,6,31,6,219
+37,Hebrew,,Israel,NA,25,2,1,BA student,1,0,1,Secular,No,,18,5,32,19,17,31,6,221
+10,Hebrew,,Israel,NA,22,2,1,BA student,1,0,1,Religious,No,,14,11,24,17,22,35,14,222
+85,Hebrew,,Israel,NA,24,2,1,BA student,1,0,1,Secular,No,,14,13,31,9,15,21,4,222
+53,Hebrew,,Israel,NA,22,2,1,BA student,1,0,1,Secular,No,,13,12,32,22,24,37,15,224
+84,Hebrew,,Israel,NA,23,2,1,MD,1,0,1,Secular,No,,5,6,14,3,15,27,7,226
+12,Hebrew,,Israel,NA,25,2,1,BA,1,0,1,Secular,No,,5,14,34,14,22,23,14,230
+63,Hebrew,,Israel,NA,24,2,1,BA student,1,0,1,Secular,No,,13,16,33,23,24,34,6,230
+26,Hebrew,,Israel,NA,29,2,1,MA,1,0,1,Traditional,No,,12,14,29,15,15,31,17,233
+67,Hebrew,,Israel,NA,22,1,2,BA student,1,0,1,Secular,No,,16,19,41,21,6,33,16,233
+44,Hebrew,,Israel,NA,32,1,2,MA,1,0,1,Traditional,No,,11,10,24,20,20,34,20,234
+57,Hebrew,,Israel,NA,27,2,1,BA student,1,0,1,Traditional,No,,7,9,17,17,17,36,11,236
+79,Hebrew,,Israel,NA,30,2,1,BA,1,0,1,Religious,No,,6,8,19,15,13,32,6,237
+56,Hebrew,,Israel,NA,24,2,1,BA,1,0,1,Secular,Yes,"OCD, anxiety",15,11,28,5,16,30,16,239
+58,Hebrew,,Israel,NA,26,2,1,BA,1,0,1,Secular,Yes,"depression, trichotillomania, anxiety",9,17,32,24,22,21,6,240
+6,Hebrew,,Israel,NA,25,2,3,BA student,1,0,1,Secular,No,,16,8,22,6,17,35,8,242
+34,Hebrew,,Israel,NA,29,2,1,MA,1,0,1,Religious,No,,11,6,19,14,13,29,13,246
+71,Hebrew,,Israel,NA,23,2,1,BA student,1,0,1,Secular,No,,5,7,15,22,7,26,4,247
+29,Hebrew,,Israel,NA,23,2,1,BA,1,0,1,Secular,Yes,ADHD,11,11,29,17,10,35,7,248
+45,Hebrew,,Israel,NA,26,2,1,BA,2,0,1,Secular,No,,9,11,23,9,3,24,15,251
+3,Hebrew,,Israel,NA,25,2,1,BA,1,0,1,Secular,No,,9,9,24,11,12,32,5,252
+39,Hebrew,,Israel,NA,29,2,1,BA student,2,0,1,Traditional,No,,6,12,21,7,0,35,18,253
+8,Hebrew,,Israel,NA,25,2,1,BA student,1,0,1,Religious,No,,18,16,34,25,27,34,12,257
+2,Hebrew,,Israel,NA,25,2,1,BA student,1,0,1,Secular,No,,10,13,20,14,6,31,7,261
+41,Hebrew,,Israel,NA,30,2,2,MA,2,2,1,Secular,No,,7,16,28,11,17,34,9,261
+9,Hebrew,,Israel,NA,24,2,1,BA student,1,0,1,Traditional,No,,7,6,20,6,8,17,8,265
+51,Hebrew,,Israel,NA,31,1,1,Engineer certificate,2,0,1,Traditional,No,,8,7,16,0,2,30,20,272
+65,Hebrew,,Israel,NA,26,2,2,BA student,1,0,1,Traditional,No,,10,7,16,17,24,42,16,272
+40,Hebrew,,Israel,NA,26,1,1,BA student,1,0,1,Secular,Yes,"ADHD, depression",14,13,40,11,10,18,7,273
+31,Hebrew,,Israel,NA,22,2,1,BA student,1,0,1,Traditional,No,,9,11,23,10,16,23,16,276
+16,Hebrew,,Israel,NA,26,2,1,BA student,1,0,1,Secular,No,,12,14,28,18,17,31,16,277
+70,Hebrew,,Israel,NA,21,1,1,Tertiary Education,1,0,1,Secular,No,,17,16,29,15,17,30,20,281
+86,Hebrew,,Israel,NA,24,2,1,BA student,1,0,1,Secular,Yes,generalized anxiety,14,12,33,13,13,35,9,285
+61,Hebrew,,Israel,NA,22,2,2,BA student,1,0,1,Secular,No,,13,13,23,12,12,33,9,286

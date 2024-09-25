@@ -4,16 +4,17 @@ install.packages("ggplot2")
 
 # Load required libraries
 library(dplyr)
+library(tidyr)
 library(rtdists)
 library(ggplot2)
-
 library(RWiener)
-
 library(purrr)
+library(tidyverse)
+
 
 # Main analysis
 # Read the CSV file and store it as a variable called data
-data <- read.csv('processed_data/stop_signal_preprocessed_int_rumination.csv')
+data <- read.csv('processed_data/stop_signal_preprocessed_int_rumination_ssrt.csv')
 
 # Assuming your data frame is called 'data'
 prepared_data <- data %>%
@@ -103,29 +104,35 @@ fit_ddm <- function(data) {
 }
 
 # Calculate mean parameter values from your fitted model
-mean_params <- model_fits %>%
-  summarise(across(c(alpha, tau, beta, delta), mean, na.rm = TRUE))
+true_params_mean <- model_fits %>%
+  summarise(
+    alpha = mean(alpha, na.rm = TRUE),
+    tau = mean(tau, na.rm = TRUE),
+    beta = mean(beta, na.rm = TRUE),
+    delta = mean(delta, na.rm = TRUE)
+  ) %>%
+  as.list()
 
-# Use these mean values for parameter recovery
+# Print the true (mean) values to check
+print(true_params_mean)
+
+# Calculate mean of each parameter
 true_params <- list(
-  alpha = mean_params$alpha,
-  tau = mean_params$tau,
-  beta = mean_params$beta,
-  delta = mean_params$delta
+  alpha = mean(true_params_mean$alpha),
+  tau = mean(true_params_mean$tau),
+  beta = mean(true_params_mean$beta),
+  delta = mean(true_params_mean$delta)
 )
 
-# Then proceed with the simulation and recovery as before
+print(true_params)
+
+# Simulate data with the mean parameters
 simulated_data <- simulate_ddm_data(
-  params = list(
-    alpha = true_params$alpha,
-    tau = true_params$tau,
-    beta = true_params$beta,
-    delta = true_params$delta
-  ),
+  params = true_params,
   n_trials = 1000
 )
 
-# Rest of the code remains the same
+# Fit the model to recover parameters
 recovered_params <- fit_ddm(simulated_data)
 
 # Compare true and recovered parameters
@@ -138,7 +145,7 @@ param_comparison <- data.frame(
 # Visualize the comparison
 ggplot(param_comparison, aes(x = True, y = Recovered)) +
   geom_point() +
-  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red", size = 1.5) +
   facet_wrap(~Parameter, scales = "free") +
   theme_minimal() +
   labs(title = "Parameter Recovery Using Mean Task Values") +
@@ -149,7 +156,6 @@ ggplot(param_comparison, aes(x = True, y = Recovered)) +
         axis.text = element_text(size = 14))
 
 ggsave("parameter_recovery.png", width = 12, height = 10)
-
 
 
 
